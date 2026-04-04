@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 import { FadeIn } from "@/components/motion/fade-in"
@@ -6,10 +7,11 @@ import { Container } from "@/components/primitives/container"
 import { MarketingArrowRight } from "@/components/primitives/marketing-arrow-right"
 import { Text } from "@/components/primitives/text"
 import { marketingButtonVariants } from "@/lib/marketing-button"
+import { siteAssets } from "@/lib/site-assets"
 import { cn } from "@/lib/utils"
 
 /**
- * Centered dark-band CTA from the landing design. Reorder via
+ * Pilot CTA — full-bleed practice photo with overlay. Reorder via
  * `home-page-sections.tsx`.
  */
 export function PilotCtaSection() {
@@ -17,14 +19,25 @@ export function PilotCtaSection() {
     <section
       id="pilot-cta"
       data-header-theme="dark"
-      className="relative scroll-mt-24 overflow-hidden bg-[#282828] px-4 py-16 sm:px-6 md:py-20 lg:px-10 lg:py-24"
+      className="relative scroll-mt-24 overflow-hidden bg-[#282828]"
       aria-labelledby="pilot-cta-heading"
     >
-      <GrainOverlay opacity={0.12} />
+      <div aria-hidden className="absolute inset-0 z-0">
+        <Image
+          src={siteAssets.pilotCtaPhoto}
+          alt=""
+          fill
+          priority={false}
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#282828]/45" />
+        <GrainOverlay opacity={0.14} />
+      </div>
 
-      <Container className="relative z-[1] max-w-3xl">
+      <Container className="relative z-[1] max-w-3xl py-16 sm:py-20 md:py-24">
         <FadeIn>
-          <div className="flex flex-col items-center gap-8 text-center">
+          <div className="flex min-h-[min(22rem,50svh)] flex-col items-center justify-center gap-8 text-center">
             <h2
               id="pilot-cta-heading"
               className="font-serif text-[clamp(1.875rem,3vw,2.5rem)] font-normal leading-[1.12] text-[#f6f6f0]"

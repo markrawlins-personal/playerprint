@@ -46,7 +46,7 @@ export function HowItWorksSection() {
             id="how-heading"
             className="font-serif text-[clamp(1.875rem,3vw,2.5rem)] font-normal leading-[1.12] text-[#181717]"
           >
-            How PlayerPrint works
+            How it works
           </h2>
         </div>
 

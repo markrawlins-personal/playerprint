@@ -4,6 +4,7 @@
  */
 export const siteAssets = {
   hero: "/images/hero.jpg",
+  pilotCtaPhoto: "/images/practice.jpg",
   problemGradientPrimary: "/images/gradient1.jpg",
   problemGradientSecondary: "/images/gradient2.jpg",
   valueBackdrop: "/images/gradient1.jpg",

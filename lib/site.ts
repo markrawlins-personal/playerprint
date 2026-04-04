@@ -14,10 +14,11 @@ export const siteConfig = {
 
 export type NavItem = { label: string; href: string }
 
-/** In-page anchors aligned to section ids (Figma single-page layout). */
+/** In-page anchors aligned to section ids (homepage scroll order). */
 export const mainNav: NavItem[] = [
   { label: "The Gap", href: "#problem" },
-  { label: "How PlayerPrint works", href: "#how-it-works" },
+  { label: "The Advantage", href: "#problem-gap" },
+  { label: "How it works", href: "#how-it-works" },
   { label: "Why PlayerPrint", href: "#value" },
 ]
 
@@ -25,9 +26,12 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
   {
     title: "Product",
     items: [
-      { label: "How PlayerPrint works", href: "#how-it-works" },
       { label: "The Gap", href: "#problem" },
+      { label: "The Advantage", href: "#problem-gap" },
       { label: "Why PlayerPrint", href: "#value" },
+      { label: "How it works", href: "#how-it-works" },
+      { label: "Join the pilot", href: "#pilot-cta" },
+      { label: "Testimonials", href: "#testimonials" },
     ],
   },
   {
