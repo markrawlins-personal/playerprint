@@ -27,6 +27,7 @@ export function HeroSection() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[rgba(158,158,158,0.15)]" />
+        <div className="absolute inset-0 bg-black/20" />
         <GrainOverlay opacity={0.18} />
       </div>
 

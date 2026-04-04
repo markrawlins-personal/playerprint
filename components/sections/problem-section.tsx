@@ -43,24 +43,26 @@ export function ProblemSection() {
               className="h-20 w-px shrink-0 bg-white/45"
               aria-hidden
             />
-            <h2
-              id="problem-heading"
-              className="text-center font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-normal leading-[1.12] text-[#f5ff3b]"
-            >
-              Most players are told things like &quot;work harder,&quot;
-              &quot;make better decisions,&quot; or &quot;be more
-              aggressive.&quot;
-            </h2>
+            <div className="flex w-full flex-col items-center gap-6">
+              <h2
+                id="problem-heading"
+                className="text-center font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-normal leading-[1.12] text-[#f5ff3b]"
+              >
+                Most players are told things like &quot;work harder,&quot;
+                &quot;make better decisions,&quot; or &quot;be more
+                aggressive.&quot;
+              </h2>
+              <Text
+                variant="sans-feature"
+                className="text-center text-white"
+              >
+                But as a parent, it’s hard to know what that actually means.
+              </Text>
+            </div>
             <div
               className="h-20 w-px shrink-0 bg-white/45"
               aria-hidden
             />
-            <Text
-              variant="sans-feature"
-              className="text-center text-white"
-            >
-              But as a parent, it’s hard to know what that actually means.
-            </Text>
           </div>
         </FadeIn>
       </Container>
