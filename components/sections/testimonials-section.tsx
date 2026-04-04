@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import { FadeIn } from "@/components/motion/fade-in"
+import { Stagger, StaggerItem } from "@/components/motion/stagger"
 import { Container } from "@/components/primitives/container"
 import { Text } from "@/components/primitives/text"
 import { siteAssets } from "@/lib/site-assets"
@@ -63,13 +64,12 @@ export function TestimonialsSection() {
           >
             What parents are saying
           </h2>
+        </FadeIn>
 
-          <ul className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
-            {testimonials.map((t, index) => (
-              <li
-                key={t.name}
-                className="flex flex-col rounded-none bg-white p-6"
-              >
+        <Stagger className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
+          {testimonials.map((t, index) => (
+            <StaggerItem key={t.name}>
+              <div className="flex h-full flex-col rounded-none bg-white p-6">
                 <Image
                   src={starIcons[index]}
                   alt=""
@@ -98,10 +98,10 @@ export function TestimonialsSection() {
                     </p>
                   </div>
                 </div>
-              </li>
-            ))}
-          </ul>
-        </FadeIn>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
       </Container>
     </section>
   )

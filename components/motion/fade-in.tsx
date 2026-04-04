@@ -10,7 +10,7 @@ import {
 
 import { cn } from "@/lib/utils"
 
-import { fadeUpVariants } from "@/lib/motion"
+import { defaultScrollViewport, fadeUpVariants } from "@/lib/motion"
 
 type FadeInProps = Omit<HTMLMotionProps<"div">, "children"> & {
   children?: ReactNode
@@ -23,7 +23,7 @@ export function FadeIn({
   variants,
   initial = "hidden",
   whileInView = "visible",
-  viewport = { once: true, margin: "-48px" },
+  viewport = defaultScrollViewport,
   ...props
 }: FadeInProps) {
   const reduce = useReducedMotion()

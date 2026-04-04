@@ -2,8 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { FadeIn } from "@/components/motion/fade-in"
+import { Stagger, StaggerItem } from "@/components/motion/stagger"
 import { GrainOverlay } from "@/components/primitives/grain-overlay"
-import { SectionBadge } from "@/components/primitives/section-badge"
 import { Container } from "@/components/primitives/container"
 import { MarketingArrowRight } from "@/components/primitives/marketing-arrow-right"
 import { siteAssets } from "@/lib/site-assets"
@@ -64,14 +64,11 @@ export function ValueSection() {
       </div>
 
       <Container className="relative z-[1] max-w-[1280px]">
-        <FadeIn>
-          <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6">
+          <FadeIn>
             <div className="flex flex-col gap-10 bg-[#282828] p-8 sm:p-10 lg:flex-row lg:items-stretch lg:gap-12 lg:p-10">
               <div className="flex min-w-0 flex-1 flex-col gap-10">
                 <div className="flex max-w-[360px] flex-col gap-10">
-                  <SectionBadge className="self-start bg-[#eceae4]">
-                    After each match
-                  </SectionBadge>
                   <div id="value-heading">
                     <p className="font-serif text-[28px] font-normal leading-[1.3] text-[#f6f6f0]">
                       After each match, you&apos;ll get a clearer picture of{" "}
@@ -130,13 +127,12 @@ export function ValueSection() {
                 </div>
               </div>
             </div>
+          </FadeIn>
 
-            <ul className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {featureCards.map((card) => (
-                <li
-                  key={card.n}
-                  className="flex flex-col gap-6 bg-[#282828] p-8 text-left sm:p-10"
-                >
+          <Stagger className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {featureCards.map((card) => (
+              <StaggerItem key={card.n}>
+                <div className="flex h-full flex-col gap-6 bg-[#282828] p-8 text-left sm:p-10">
                   <span className="font-mono text-xl font-normal uppercase leading-[1.3] tracking-[0.4px] text-[#d9e0e5]">
                     {card.n}
                   </span>
@@ -146,11 +142,11 @@ export function ValueSection() {
                   <p className="font-sans text-sm font-normal leading-[1.46] tracking-[0.28px] text-[#dbdbd6]">
                     {card.description}
                   </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </FadeIn>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
       </Container>
     </section>
   )

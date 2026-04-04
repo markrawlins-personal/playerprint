@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import { FadeIn } from "@/components/motion/fade-in"
+import { Stagger, StaggerItem } from "@/components/motion/stagger"
 import { Container } from "@/components/primitives/container"
 import { SectionBadge } from "@/components/primitives/section-badge"
 import { siteAssets } from "@/lib/site-assets"
@@ -35,43 +36,48 @@ export function ProblemGapDetailSection() {
       <Container className="max-w-[1280px]">
         <FadeIn>
           <div className="flex flex-col items-center gap-6 sm:gap-10">
-            <div className="flex w-full max-w-[768px] flex-col items-center gap-4 text-center">
-              <SectionBadge>The Advantage</SectionBadge>
-              <h2
-                id="problem-gap-heading"
-                className="font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-normal leading-[1.12] tracking-[-0.02em] text-[#181717] md:text-[40px]"
-              >
-                PlayerPrint gives you a clearer view of your player&apos;s game
-              </h2>
-              <p className="font-sans text-lg font-normal leading-[1.46] text-[#181717] md:text-[22px]">
-                Grounded in what consistently shows up on the field, not just
-                what stands out in one moment.
-              </p>
-            </div>
+            <Stagger className="flex w-full max-w-[768px] flex-col items-center gap-4 text-center">
+              <StaggerItem>
+                <SectionBadge>The Advantage</SectionBadge>
+              </StaggerItem>
+              <StaggerItem>
+                <h2
+                  id="problem-gap-heading"
+                  className="font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-normal leading-[1.12] tracking-[-0.02em] text-[#181717] md:text-[40px]"
+                >
+                  PlayerPrint gives you a clearer view of your player&apos;s game
+                </h2>
+              </StaggerItem>
+              <StaggerItem>
+                <p className="font-sans text-lg font-normal leading-[1.46] text-[#181717] md:text-[22px]">
+                  Grounded in what consistently shows up on the field, not just
+                  what stands out in one moment.
+                </p>
+              </StaggerItem>
+            </Stagger>
 
             <div className="w-full px-0 sm:px-6 md:px-10">
-              <ul className="grid w-full gap-6 md:grid-cols-3 md:gap-6">
+              <Stagger className="grid w-full gap-6 md:grid-cols-3 md:gap-6">
                 {cards.map(({ icon, title }) => (
-                  <li
-                    key={title}
-                    className="flex min-h-[200px] flex-col justify-between bg-white p-8 md:p-10"
-                  >
-                    <div className="relative size-12 shrink-0">
-                      <Image
-                        src={icon}
-                        alt=""
-                        width={48}
-                        height={48}
-                        className="object-contain"
-                        unoptimized
-                      />
+                  <StaggerItem key={title}>
+                    <div className="flex min-h-[200px] flex-col justify-between bg-white p-8 md:p-10">
+                      <div className="relative size-12 shrink-0">
+                        <Image
+                          src={icon}
+                          alt=""
+                          width={48}
+                          height={48}
+                          className="object-contain"
+                          unoptimized
+                        />
+                      </div>
+                      <p className="font-serif text-lg font-normal leading-[1.3] tracking-[0.44px] text-[#181717] md:text-[22px]">
+                        {title}
+                      </p>
                     </div>
-                    <p className="font-serif text-lg font-normal leading-[1.3] tracking-[0.44px] text-[#181717] md:text-[22px]">
-                      {title}
-                    </p>
-                  </li>
+                  </StaggerItem>
                 ))}
-              </ul>
+              </Stagger>
             </div>
           </div>
         </FadeIn>
