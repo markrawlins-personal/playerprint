@@ -21,7 +21,7 @@ export function SiteFooter() {
           <div className="flex max-w-md flex-col gap-8">
             <BrandLogo variant="footer" />
             <p className="font-mono text-xs leading-[1.3] tracking-[0.24px] text-[#dbdbd6]">
-              TBD
+              Where development becomes clear
             </p>
             <Link
               href="#value"

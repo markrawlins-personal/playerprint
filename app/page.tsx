@@ -1,9 +1,6 @@
 import type { Metadata } from "next"
 
-import { HeroSection } from "@/components/sections/hero-section"
-import { HowItWorksSection } from "@/components/sections/how-it-works-section"
-import { ProblemSection } from "@/components/sections/problem-section"
-import { ValueSection } from "@/components/sections/value-section"
+import { HomePageSections } from "@/components/sections/home-page-sections"
 import { siteConfig } from "@/lib/site"
 
 export const metadata: Metadata = {
@@ -26,10 +23,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HeroSection />
-      <ProblemSection />
-      <HowItWorksSection />
-      <ValueSection />
+      <HomePageSections />
     </>
   )
 }

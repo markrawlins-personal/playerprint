@@ -15,4 +15,7 @@ export const siteAssets = {
   step2: "/svgs/shield2.svg",
   step3: "/svgs/shield3.svg",
   rightArrow: "/svgs/right_arrow.svg",
+  advantageIcon1: "/svgs/advantage/icon-1.svg",
+  advantageIcon2: "/svgs/advantage/icon-2.svg",
+  advantageIcon3: "/svgs/advantage/icon-3.svg",
 } as const
