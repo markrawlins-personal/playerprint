@@ -19,4 +19,7 @@ export const siteAssets = {
   advantageIcon1: "/svgs/advantage/icon-1.svg",
   advantageIcon2: "/svgs/advantage/icon-2.svg",
   advantageIcon3: "/svgs/advantage/icon-3.svg",
+  star1: "/svgs/star1.svg",
+  star2: "/svgs/star2.svg",
+  star3: "/svgs/star3.svg",
 } as const

@@ -1,8 +1,15 @@
-import { Quote } from "lucide-react"
+import Image from "next/image"
 
 import { FadeIn } from "@/components/motion/fade-in"
 import { Container } from "@/components/primitives/container"
 import { Text } from "@/components/primitives/text"
+import { siteAssets } from "@/lib/site-assets"
+
+const starIcons = [
+  siteAssets.star1,
+  siteAssets.star2,
+  siteAssets.star3,
+] as const
 
 const testimonials = [
   {
@@ -58,20 +65,24 @@ export function TestimonialsSection() {
           </h2>
 
           <ul className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
-            {testimonials.map((t) => (
+            {testimonials.map((t, index) => (
               <li
                 key={t.name}
-                className="flex flex-col rounded-2xl border border-[#d4d2cc] bg-white p-6 shadow-sm ring-1 ring-[#181717]/5"
+                className="flex flex-col rounded-none bg-white p-6"
               >
-                <Quote
-                  className="size-8 shrink-0 text-[#e6f019]"
-                  strokeWidth={1.25}
+                <Image
+                  src={starIcons[index]}
+                  alt=""
+                  width={48}
+                  height={48}
+                  className="size-12 shrink-0 object-contain"
+                  unoptimized
                   aria-hidden
                 />
                 <Text variant="sans-base" className="mt-4 flex-1 text-pretty text-[#181717]">
                   {t.quote}
                 </Text>
-                <div className="mt-6 flex items-center gap-3 border-t border-[#eceae4] pt-5">
+                <div className="mt-6 flex items-center gap-3 pt-5">
                   <span
                     className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#eceae4] font-mono text-xs font-medium text-[#181717]"
                     aria-hidden
