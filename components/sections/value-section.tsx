@@ -35,7 +35,7 @@ const featureCards = [
 ] as const
 
 /**
- * “After each match” value band — matches Figma node 2:1315.
+ * “After each match” value band — matches Figma node 2:1315; feature grid 2×2 with 24px gaps.
  */
 export function ValueSection() {
   return (
@@ -129,17 +129,17 @@ export function ValueSection() {
             </div>
           </FadeIn>
 
-          <Stagger className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
             {featureCards.map((card) => (
               <StaggerItem key={card.n}>
-                <div className="flex h-full flex-col gap-6 bg-[#282828] p-8 text-left sm:p-10">
+                <div className="flex h-full min-h-[230px] flex-col gap-6 bg-[#282828] p-8 text-left sm:p-10">
                   <span className="font-mono text-xl font-normal uppercase leading-[1.3] tracking-[0.4px] text-[#d9e0e5]">
                     {card.n}
                   </span>
-                  <p className="font-serif text-[22px] font-normal leading-[1.3] tracking-[0.44px] text-white text-pretty">
+                  <p className="font-serif text-[22px] font-normal leading-[1.3] tracking-[0.44px] text-pretty text-white">
                     {card.title}
                   </p>
-                  <p className="font-sans text-sm font-normal leading-[1.46] tracking-[0.28px] text-[#dbdbd6]">
+                  <p className="font-sans text-sm font-normal leading-[1.3] tracking-[0.28px] text-white">
                     {card.description}
                   </p>
                 </div>
