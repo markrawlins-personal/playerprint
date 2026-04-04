@@ -38,7 +38,7 @@ export function ProblemSection() {
       <Container className="relative z-[1] flex justify-center">
         <FadeIn className="w-full max-w-[640px]">
           <div className="flex flex-col items-center gap-4 rounded-none bg-[rgba(126,162,179,0.6)] px-6 py-10 backdrop-blur-[82px] sm:px-12 sm:py-10 md:px-20">
-            <SectionBadge>The problem</SectionBadge>
+            <SectionBadge>The Gap</SectionBadge>
             <div
               className="h-20 w-px shrink-0 bg-white/45"
               aria-hidden

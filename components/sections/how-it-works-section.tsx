@@ -18,14 +18,14 @@ const steps = [
   {
     n: "02",
     title: "We analyze the game",
-    body: "Using professional-grade evaluation frameworks, we break down every key moment.",
+    body: "We break the match down using a professional-grade evaluation framework focused on decisions, tendencies, and behaviors that matter over time.",
     icon: siteAssets.step2,
     bg: "bg-[#d9e0e5]",
   },
   {
     n: "03",
     title: "Get your PlayerPrint",
-    body: "A clear, structured breakdown of your player’s performance and development.",
+    body: "Receive a clear, structured report that helps you understand where your player stands and what to focus on next.",
     icon: siteAssets.step3,
     bg: "bg-[#fff7ab]",
   },
@@ -46,7 +46,7 @@ export function HowItWorksSection() {
             id="how-heading"
             className="font-serif text-[clamp(1.875rem,3vw,2.5rem)] font-normal leading-[1.12] text-[#181717]"
           >
-            How it works
+            How PlayerPrint works
           </h2>
         </div>
 

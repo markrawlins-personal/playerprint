@@ -37,12 +37,12 @@ export function HeroSection() {
             id="hero-heading"
             className="font-serif text-[clamp(2.25rem,5vw,3rem)] font-normal leading-[1.12] tracking-[-0.025em] text-[#e6f019]"
           >
-            See how your player is actually developing
+            Finally see the real story of your player&apos;s development
           </h1>
           <Text variant="sans-lg" className="mt-4 text-white">
-            PlayerPrint turns match film into clear, objective insight — so you
-            can understand your player’s game, track their progress, and know
-            what to focus on next.
+            PlayerPrint turns match film into clear development insight—so you
+            can understand how your player is really performing, where
+            they&apos;re improving, and what matters most right now.
           </Text>
           <div className="mt-14 flex flex-col gap-6 md:mt-16 lg:mt-[4.5rem]">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-12">
@@ -52,7 +52,7 @@ export function HeroSection() {
                   marketingButtonVariants({ variant: "lime", size: "hero" })
                 )}
               >
-                Get started
+                Join the pilot
                 <MarketingArrowRight />
               </Link>
               <Link
@@ -66,7 +66,7 @@ export function HeroSection() {
               </Link>
             </div>
             <Text variant="mono-md" className="text-white">
-              Free first month. No charge unless accepted into the pilot.
+              Limited pilot. Free first month if accepted.
             </Text>
           </div>
         </FadeIn>

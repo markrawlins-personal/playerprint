@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "PlayerPrint",
   tagline: "Objective insight from match film.",
   description:
-    "PlayerPrint turns match film into clear, objective insight — so you can understand your player’s game, track their progress, and know what to focus on next.",
+    "PlayerPrint turns match film into clear development insight—so you can understand how your player is really performing, where they're improving, and what matters most right now.",
   url: "https://playerprint.com",
   links: {
     twitter: "https://twitter.com/playerprint",
@@ -16,8 +16,8 @@ export type NavItem = { label: string; href: string }
 
 /** In-page anchors aligned to section ids (Figma single-page layout). */
 export const mainNav: NavItem[] = [
-  { label: "The problem", href: "#problem" },
-  { label: "How it works", href: "#how-it-works" },
+  { label: "The Gap", href: "#problem" },
+  { label: "How PlayerPrint works", href: "#how-it-works" },
   { label: "Why PlayerPrint", href: "#value" },
 ]
 
@@ -25,8 +25,8 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
   {
     title: "Product",
     items: [
-      { label: "How it works", href: "#how-it-works" },
-      { label: "The problem", href: "#problem" },
+      { label: "How PlayerPrint works", href: "#how-it-works" },
+      { label: "The Gap", href: "#problem" },
       { label: "Why PlayerPrint", href: "#value" },
     ],
   },

@@ -33,7 +33,7 @@ export function SiteFooter() {
                 "w-fit"
               )}
             >
-              Get started
+              Join the pilot
               <MarketingArrowRight />
             </Link>
           </div>

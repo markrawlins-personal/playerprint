@@ -7,7 +7,7 @@ import { ValueSection } from "@/components/sections/value-section"
 import { siteConfig } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "See how your player is actually developing",
+  title: "Finally see the real story of your player's development",
   description: siteConfig.description,
 }
 
