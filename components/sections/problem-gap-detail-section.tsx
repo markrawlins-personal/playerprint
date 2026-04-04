@@ -57,23 +57,26 @@ export function ProblemGapDetailSection() {
             </Stagger>
 
             <div className="w-full px-0 sm:px-6 md:px-10">
-              <Stagger className="grid w-full gap-6 md:grid-cols-3 md:gap-6">
+              <Stagger className="grid w-full items-stretch gap-6 md:grid-cols-3 md:gap-6">
                 {cards.map(({ icon, title }) => (
-                  <StaggerItem key={title}>
-                    <div className="flex min-h-[200px] flex-col justify-between bg-white p-8 md:p-10">
-                      <div className="relative size-12 shrink-0">
-                        <Image
-                          src={icon}
-                          alt=""
-                          width={48}
-                          height={48}
-                          className="object-contain"
-                          unoptimized
-                        />
+                  <StaggerItem key={title} className="h-full">
+                    <div className="flex h-full min-h-[200px] flex-col bg-white p-8 md:p-10">
+                      <div className="flex flex-col gap-12">
+                        <div className="relative size-12 shrink-0">
+                          <Image
+                            src={icon}
+                            alt=""
+                            width={48}
+                            height={48}
+                            className="object-contain"
+                            unoptimized
+                          />
+                        </div>
+                        <p className="font-serif text-lg font-normal leading-[1.3] tracking-[0.44px] text-[#181717] md:text-[22px]">
+                          {title}
+                        </p>
                       </div>
-                      <p className="font-serif text-lg font-normal leading-[1.3] tracking-[0.44px] text-[#181717] md:text-[22px]">
-                        {title}
-                      </p>
+                      <div className="min-h-0 flex-1" aria-hidden />
                     </div>
                   </StaggerItem>
                 ))}
