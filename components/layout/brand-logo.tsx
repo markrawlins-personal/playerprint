@@ -41,18 +41,18 @@ export function BrandLogo({
         <Image
           src={siteAssets.logoShield}
           alt="PlayerPrint"
-          width={46}
+          width={37}
           height={46}
-          className="h-[46px] w-[46px] object-contain object-left"
+          className="h-[46px] w-auto object-contain object-left"
           priority
         />
       ) : (
         <Image
           src={siteAssets.logoFull}
           alt="PlayerPrint"
-          width={180}
+          width={188}
           height={46}
-          className="h-[46px] w-auto max-w-[200px] object-contain object-left"
+          className="h-9 w-auto max-w-[200px] object-contain object-left"
           priority
         />
       )}
