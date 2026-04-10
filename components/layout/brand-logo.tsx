@@ -41,8 +41,8 @@ export function BrandLogo({
         <Image
           src={siteAssets.logoShield}
           alt="PlayerPrint"
-          width={37}
-          height={46}
+          width={79}
+          height={117}
           className="h-[46px] w-auto object-contain object-left"
           priority
         />
