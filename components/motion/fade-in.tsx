@@ -1,6 +1,7 @@
 "use client"
 
 import type { ReactNode } from "react"
+import { useRef } from "react"
 import {
   motion,
   useReducedMotion,
@@ -8,11 +9,15 @@ import {
   type Variants,
 } from "framer-motion"
 
+import { useWhenInView } from "@/hooks/use-when-in-view"
 import { cn } from "@/lib/utils"
 
-import { defaultScrollViewport, fadeUpVariants } from "@/lib/motion"
+import { fadeUpVariants } from "@/lib/motion"
 
-type FadeInProps = Omit<HTMLMotionProps<"div">, "children"> & {
+type FadeInProps = Omit<
+  HTMLMotionProps<"div">,
+  "children" | "whileInView" | "viewport" | "animate"
+> & {
   children?: ReactNode
   variants?: Variants
 }
@@ -22,12 +27,12 @@ export function FadeIn({
   children,
   variants,
   initial = "hidden",
-  whileInView = "visible",
-  viewport = defaultScrollViewport,
   ...props
 }: FadeInProps) {
   const reduce = useReducedMotion()
   const v = variants ?? fadeUpVariants
+  const ref = useRef<HTMLDivElement>(null)
+  const inView = useWhenInView(ref)
 
   if (reduce) {
     return <div className={cn(className)}>{children}</div>
@@ -35,11 +40,11 @@ export function FadeIn({
 
   return (
     <motion.div
+      ref={ref}
       className={cn(className)}
       variants={v}
       initial={initial}
-      whileInView={whileInView}
-      viewport={viewport}
+      animate={inView ? "visible" : "hidden"}
       {...props}
     >
       {children}

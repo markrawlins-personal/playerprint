@@ -45,10 +45,3 @@ export const staggerTight: Variants = {
     },
   },
 }
-
-/** Default viewport for scroll-triggered animations. */
-export const defaultScrollViewport = {
-  once: true,
-  amount: 0.22,
-  margin: "0px 0px -12% 0px",
-} as const
